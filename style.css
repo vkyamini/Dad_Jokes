@@ -11,8 +11,15 @@ body{
     display: block;
     margin: 0 auto;
     background-color:lightsalmon;
+    border-radius:12px;
+    border-color: chocolate;
+    box-shadow: 2px 2px 3px 3px black;
 
 }
-#button{
-    background-color:lightsalmon;
+#fetchButton:hover{
+  height:30px;
+    background-color: bisque;
+    box-shadow: none;
+    background-color: lightsalmon;
+    
 }

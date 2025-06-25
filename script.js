@@ -4,10 +4,8 @@ var jokes_display = document.querySelector("#jokes_display");
 var fetchButton = document.querySelector("#fetchButton");
 var searchJokes = document.querySelector('#button'); 
 var input = document.createElement('input');
-var i=0;
 
-//console.log(searchJokes)
-//jokes_display.append(input);
+
 
 function getJokes(){
     console.log("jokes");
@@ -36,10 +34,11 @@ function getInput(){
         return response.json();
     }).then(function(data){
         var jokesdis = document.createElement('p');
-        jokesdis.setAttribute("style","text-align: center; color: chocolate;");
+        jokesdis.setAttribute("style","text-align: center; color: chocolate; font-weight: bolder;");
         jokes_display.append(jokesdis);
-        jokesdis.textContent = data.results[i].joke;
-        i = i++;
+       
+        jokesdis.textContent = data.results[0].joke;
+       
     })
 }
 
